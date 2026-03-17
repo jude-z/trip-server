@@ -4,7 +4,477 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="826d744d-a83f-4122-97b3-c028acbe2167" name="Changes" comment="" />
+    <list default="true" id="826d744d-a83f-4122-97b3-c028acbe2167" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.12.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/QBaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/address/QAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/category/QCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/comment/QComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/comment/QCommentLike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/comment/QGroupComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/comment/QGroupCommentLike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/course/QCourse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/courselike/QCourseLike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/coursereview/QCourseReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/coursespot/QCourseSpot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/destination/QDestination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/enroll/QEnroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/fail/QFail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/festival/QFestival.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/group/QGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/group/QGroupLike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/image/QImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/itinerary/QItinerary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/keep/QKeep.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/kindplace/QKindPlace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/member/QMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/pay/impotency/QImpotency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/pay/payment/QPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/pay/payment/QTempPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/plan/QPlan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/receiptreview/QReceiptReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/receiptreviewimage/QReceiptReviewImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/review/QReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/searchlog/QSearchLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/social/QSocial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/tag/QTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/tip/QTip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/tourspot/QTourSpot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/tripplannerai/domain/entity/viewlog/QViewLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/CoreApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/common/advice/CommonAdviceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/comment/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/comment/GroupCommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/course/CourseLikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/destination/AiRecommendationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/destination/DestinationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/festival/FestivalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/group/GroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/keep/KeepController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/member/MemberController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/plan/PlanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/response/ApiDataResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/response/ApiStatusResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/common/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/common/exception/CommonException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/point/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jdbc/category/JdbcCategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jdbc/comment/JdbcCommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jdbc/course/JdbcCourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jdbc/destination/JdbcDestinationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/category/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/comment/CommentLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/comment/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/comment/GroupCommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/course/CourseLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/course/CourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/course/CourseSpotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/destination/DestinationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/enroll/EnrollRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/group/GroupLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/group/GroupRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/keep/KeepRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/kindplace/KindPlaceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/member/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/plan/PlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/point/PointRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/receiptreview/ReceiptReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/tourspot/TourSpotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/comment/QueryDslCommentLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/comment/QueryDslCommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/comment/QueryDslGroupCommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/course/QueryDslCourseLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/course/QueryDslCourseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/course/QueryDslCourseSpotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/destination/QueryDslDestinationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/enroll/QueryDslEnrollRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/group/QueryDslGroupLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/group/QueryDslGroupRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/keep/QueryDslKeepRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/kindplace/QueryDslKindPlaceRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/member/QueryDslMemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/plan/QueryDslPlanRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/receiptreview/QueryDslReceiptReviewRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/tourspot/QueryDslTourSpotRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/comment/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/comment/GroupCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/course/CourseLikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/group/GroupService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/keep/KeepService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/member/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/myplan/PlanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-core/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/PaymentApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/common/advice/CommonAdviceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/common/resolver/IdResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/common/resolver/UsernameResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/common/resolver/annotation/Id.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/common/resolver/annotation/Username.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/controller/PaymentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/response/ApiDataResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/response/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/response/ApiStatusResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/basic/filter/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/basic/userdetail/CustomUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/jwt/JwtProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/jwt/JwtSubject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/jwt/JwtValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/oauth/handler/OAuth2FailureHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/oauth/handler/OAuth2SuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/oauth/userdetail/CustomOAuth2User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/webhook/WebHookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/client/PaymentClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/idempotency/Idempotency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/payment/TempPayment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/status/PaymentStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/jpa/idempotency/IdempotencyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/jpa/payment/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/querydsl/idempotency/QueryDslIdempotencyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/querydsl/payment/QueryDslPaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/querydsl/payment/QueryDslTempPaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/redis/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/scheduler/ReconciliationScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/scheduler/ReconciliationSchedulerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/PaymentFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/PaymentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/ReconciliationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/WebHookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trip-payment/src/test/java/payment/idempotency/IdempotencyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/TripplannerAiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/AdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/AiRecommendAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/CommentAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/CourseLikeAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/DestinationAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/FailAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/FestivalAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/GroupAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/ImageControllerAdvice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/KeepAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/MemberAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/advice/PaymentAdviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/annotation/Id.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/common/resolver/annotation/Id.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/annotation/Username.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/common/resolver/annotation/Username.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/email/EmailProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/emitter/EmitterRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/emitter/EmitterRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/comment/AlreadyCommentLikeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/comment/NotFoundCommentException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/comment/NotFoundCommentLikeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/comment/NotFoundGroupCommentException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/comment/NotFoundReceiptReviewExeption.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/comment/NotValidDepthException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/comment/NullPathException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/course/AlreadyExistsReviewException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/course/NotFoundCourseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/course/NotFoundCourseLikeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/destination/NotFoundDDestinationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/enroll/NotFoundEnrollException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/fail/SseSendException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/group/AlreadyGroupLikeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/group/AlreadyParticipateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/group/InvalidPointException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/group/NotFoundGroupException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/group/NotFoundGroupLikeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/group/NotParticipateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/image/NotFoundImageException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/keep/NotFoundKeepException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/member/InvalidJwtTokenException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/member/MemberExistException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/member/NotAuthorizeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/member/NotCorrectCertificationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/member/NotFoundCertificationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/member/NotFoundMemberException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/member/UnCorrectPasswordException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/payment/AlreadyPaymentRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/payment/NotFoundPaymentException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/payment/NotFoundTempPaymentException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/exception/payment/PaymentServerErrorException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/handler/OAuth2FailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/oauth/handler/OAuth2FailureHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/handler/OAuth2SuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/oauth/handler/OAuth2SuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/jwt/JwtProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/jwt/JwtProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/jwt/JwtSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/jwt/JwtSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/jwt/JwtValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/jwt/JwtValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/kindplace/KindPlaceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/kindplace/KindPlaceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/resolver/IdResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/common/resolver/IdResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/resolver/UsernameResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/common/resolver/UsernameResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/s3/S3DownloadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/s3/S3DownloadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/s3/S3UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/s3/S3UploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/security/CustomOAuth2User.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/oauth/userdetail/CustomOAuth2User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/basic/userdetail/CustomUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/common/security/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/basic/filter/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/AsyncConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/QueryDslConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/QueryDslConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/RedisConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/S3Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/s3/config/S3Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/web/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/WebClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/web/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/HealthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/HealthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/category/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/category/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/coment/CommentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/coment/GroupCommentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/course/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/course/CourseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/course/CourseLikeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/course/CourseReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/course/CourseReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/destination/AiRecommendationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/destination/DestinationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/fail/FailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/festival/FestivalController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/group/GroupController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/image/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/image/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/keep/KeepController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/member/MemberController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/payment/PaymentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/plan/PlanController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/controller/receiptreview/ReceiptReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/controller/receiptreview/ReceiptReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/category/CategoryElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/category/CategoryElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/category/TotalCategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/comment/AddCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/comment/AddCommentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/comment/UpdateCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/comment/UpdateCommentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/course/CourseReviewRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/course/CourseReviewRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/destination/DestinationSearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/destination/DestinationSearchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/festival/FestivalBookmarkRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/festival/FestivalBookmarkRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/group/AddGroupRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/group/AddGroupRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/member/CertificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/member/CertificationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/member/EmailCertificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/member/EmailCertificationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/member/EmailCheckoutRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/member/EmailCheckoutRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/member/SignInRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/member/SignInRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/member/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/member/SignUpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/member/UpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/member/UpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/payment/PaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/request/PaymentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/payment/Reason.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/request/CancelPaymentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/payment/TempPaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/request/TempPaymentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/receiptreview/ReceiptReviewRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/receiptreview/ReceiptReviewRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/recommend/RecommendRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/recommend/RecommendRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/request/recommend/SaveRecommendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/request/recommend/SaveRecommendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/response/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/comment/AddCommentResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/comment/CommentElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/comment/CommentElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/comment/CommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/comment/CommentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/comment/DeleteCommentResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/comment/LikeCommentResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/comment/UpdateCommentResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/course/CourseDetailResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/course/CourseDetailResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/course/CourseInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/course/CourseInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/course/CourseResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/course/CourseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/course/CourseReviewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/course/CourseReviewResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/course/CourseSpotDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/course/CourseSpotDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/course/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/course/ResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationCategoryDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationCategoryDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationCategoryQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationCategoryQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationInfoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationInfoResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationTotalDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationTotalDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationTotalQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationTotalQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationsCategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/DestinationsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/destination/DestinationsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/destination/TotalDestinationResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/fail/CloseResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/fail/FailResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/festival/FestivalLikeResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/AddGroupResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/group/AddGroupResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/ApplyElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/group/ApplyElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/ApplyGroupResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/DeleteGroupResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/DonateResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/GroupElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/group/GroupElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/GroupLikeResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/GroupResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/group/GroupResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/GroupsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/group/GroupsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/LeaveGroupResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/group/ParticipateGroupResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/keep/CreateKeepResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/keep/DeleteKeepResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/keep/DetailKeepResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/keep/KeepElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/keep/KeepElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/keep/KeepsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/keep/KeepsResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/kindplace/ApiKindPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/kindplace/ApiKindPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/kindplace/ApiKindPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/kindplace/ApiKindPlaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/kindplace/FetchKindPlaces.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/CheckCertificationResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/EmailCheckoutResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/FetchMemberResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/member/FetchMemberResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/RefreshResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/SendCertificationResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/SignInResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/SignUpResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/response/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/member/UpdateResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/payment/CancelResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/payment/CheckTempResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/payment/ConfirmResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/payment/FetchPaymentsResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/payment/PaymentElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/projection/payment/PaymentElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/payment/SaveTempResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/plan/DeletePlanResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/plan/ItineraryResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/plan/ItineraryResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/plan/PlanResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/plan/PlanResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/receiptreview/ReceiptReviewResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/receiptreview/ReceiptReviewResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/receiptreview/ReviewImageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/receiptreview/ReviewImageDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/recommend/Accommodation.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/recommend/Accommodation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/recommend/AiSaveResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/recommend/AiSaveResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/recommend/DayScheduleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/recommend/DayScheduleDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/recommend/DestinationDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/recommend/RecommendationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/recommend/RecommendationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/dto/response/recommend/SpotDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/projection/recommend/SpotDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/address/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/address/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/certification/Certification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/comment/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/comment/CommentLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/comment/CommentLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/comment/GroupComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/comment/GroupComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/comment/GroupCommentLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/comment/GroupCommentLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/course/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/course/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/courselike/CourseLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/courselike/CourseLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/coursereview/CourseReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/coursereview/CourseReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/coursespot/CourseSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/coursespot/CourseSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/destination/Destination.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/destination/Destination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/enroll/Enroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/enroll/Enroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/fail/Fail.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/fail/Fail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/fcm/FCMToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/fcm/FCMTokenTopic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/fcm/MemberTopic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/fcm/Topic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/festival/Festival.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/festival/Festival.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/group/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/group/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/group/GroupLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/group/GroupLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/image/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/image/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/itinerary/Itinerary.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/itinerary/Itinerary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/keep/Keep.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/keep/Keep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/kindplace/KindPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/kindplace/KindPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/member/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/pay/impotency/Impotency.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/pay/payment/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/payment/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/pay/payment/TempPayment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/plan/Plan.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/plan/Plan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/receiptreview/ReceiptReview.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/receiptreview/ReceiptReview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/receiptreviewimage/ReceiptReviewImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/receiptreviewimage/ReceiptReviewImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/review/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/review/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/searchlog/SearchLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/searchlog/SearchLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/social/Social.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/social/Social.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/social/SocialType.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/social/SocialType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/tag/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/tag/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/tip/Tip.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/tip/Tip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/tourspot/TourSpot.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/tourspot/TourSpot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/entity/viewlog/ViewLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity/viewlog/ViewLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/AddressFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/AddressFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/CategoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/CategoryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/DestinationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/DestinationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/EnrollFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/EnrollFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/GroupFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/GroupFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/ImageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/ImageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/MemberFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/MemberFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/PaymentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/mapper/PaymentFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/SearchLogFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/SearchLogFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/mapper/ViewLogFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/domain/mapper/ViewLogFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/address/AddressCustomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/address/AddressCustomRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/address/QueryDslAddressRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/address/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/address/AddressRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/category/CategoryCustomRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/category/CategoryCustomRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/querydsl/category/QueryDslCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/category/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/certification/CertificationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/comment/CommentLikeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/comment/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/comment/GroupCommentLikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/comment/GroupCommentLikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/comment/GroupCommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/course/CourseLikeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/course/CourseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/course/CourseReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/course/CourseReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/course/CourseSpotRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/destination/DestinationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/enroll/EnrollRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/fail/FailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/fail/FailRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/fcm/FCMTokenRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/fcm/FCMTokenTopicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/fcm/MemberTopicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/fcm/TopicRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/festival/FestivalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/festival/FestivalRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/group/GroupLikeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/group/GroupRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/image/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/image/ImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/impotency/ImpotencyRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/itinerary/ItineraryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/itinerary/ItineraryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/keep/KeepRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/kindplace/KindPlaceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/member/MemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/member/SocialRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/member/SocialRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/payment/PaymentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/payment/TempPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/jpa/payment/TempPaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/plan/PlanRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/receiptreview/ReceiptReviewImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/receiptreview/ReceiptReviewImageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/receiptreview/ReceiptReviewRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/searchlog/SearchLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/searchlog/SearchLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/tourspot/TourSpotRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/repository/viewlog/ViewLogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa/viewlog/ViewLogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/AsyncService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/address/AddressService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/address/AddressServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/address/AddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/category/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/category/CategoryServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/category/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/comment/CommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/comment/GroupCommentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/course/CourseLikeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/course/CourseLikeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/course/CourseReviewService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/course/CourseReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/course/CourseReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/course/CourseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/course/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/course/CourseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/destination/DestinationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/destination/DestinationServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/destination/DestinationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/fail/FailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/festival/FestivalBookmarkService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/festival/FestivalBookmarkServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/festival/FestivalBookmarkService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/group/GroupService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/image/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/image/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/keep/KeepService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/kindplace/KindPlaceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/kindplace/KindPlaceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/member/MemberService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/myplan/PlanService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/myplan/PlanServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/oauth/OAuth2UserServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/oauth/OAuth2UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/payment/PaymentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/receiptreview/ReceiptReviewService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/receiptreview/ReceiptReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/receiptreview/ReceiptReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/recommend/AiRecommendationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/service/recommend/AiRecommendationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/service/recommend/AiRecommendationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/util/CommentUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/common/util/CommentUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/util/ConstClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/util/CookieUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/common/util/CookieUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/util/PageLimitCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/common/util/PageLimitCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tripplannerai/util/init/DbInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/common/init/DbInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tripplannerai/TripplannerAiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/tripplannerai/repository/member/MemberRepositoryTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,39 +485,71 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jude-z&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jude-z/trip-server.git&quot;,
+    &quot;accountId&quot;: &quot;d9e03ce4-e448-46e2-9acd-9896f53e1a59&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="3Aa7bF6IqHwXGwntkj6MTALhlS0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Download Sources.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/admin/trip-server/spring-server"
+    "last_opened_file_path": "/Users/admin/trip-server/spring-server/trip-core/src/main/java/core/infra/jpa",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="spring-server" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="spring-server" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa" />
+      <recent name="$PROJECT_DIR$/trip-core/src/main/java/core/domain/entity" />
+      <recent name="$PROJECT_DIR$/trip-core/src/main/java/core" />
+      <recent name="$PROJECT_DIR$/trip-payment/src/main/java/payment/api" />
+      <recent name="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/response" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="payment.infra.querydsl.payment" />
+      <recent name="payment.domain.pay.payment" />
+      <recent name="com.tripplannerai.infra.querydsl.address" />
+      <recent name="com.tripplannerai.infra.jdbc.category" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

@@ -1,0 +1,16 @@
+package core.api.request.comment;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class AddCommentRequest {
+    private String content;
+    private Long parentId;
+
+}
