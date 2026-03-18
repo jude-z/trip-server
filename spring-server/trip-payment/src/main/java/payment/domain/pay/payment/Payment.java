@@ -19,10 +19,10 @@ public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "payment_key")
+    @Column(name = "payment_key",unique = true)
     private String paymentKey;
     private Long amount;
-    @Column(name = "order_id")
+    @Column(name = "order_id",unique = true)
     private String orderId;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")

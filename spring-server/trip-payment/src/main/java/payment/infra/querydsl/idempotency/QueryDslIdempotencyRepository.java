@@ -20,7 +20,6 @@ public class QueryDslIdempotencyRepository {
         return Optional.ofNullable(queryFactory
                 .selectFrom(idempotency)
                 .where(idempotency.idempotencyKey.eq(idempotencyKey))
-                .setLockMode(LockModeType.PESSIMISTIC_READ)
                 .fetchOne());
     }
 }

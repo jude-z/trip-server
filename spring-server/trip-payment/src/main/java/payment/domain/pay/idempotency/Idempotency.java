@@ -14,7 +14,7 @@ public class Idempotency {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "idempotency_key")
+    @Column(name = "idempotency_key",unique = true)
     private String idempotencyKey;
 
     public static Idempotency of(String idempotencyKey) {

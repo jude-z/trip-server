@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import core.common.Status;
 import core.common.exception.CommonException;
 import core.domain.entity.member.Member;
+import core.domain.entity.point.Point;
+import core.infra.jpa.point.PointRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -29,11 +31,12 @@ public class WebHookService {
     private final IdempotencyRepository idempotencyRepository;
     private final RedisTemplate<String,String> redisTemplate;
     private final QueryDslIdempotencyRepository queryDslIdempotencyRepository;
+    private final PointRepository pointRepository;
 
 
 
     public void processWebHook(JsonNode jsonNode) {
-        JsonNode data = jsonNode.get("data").get("status");
+        JsonNode data = jsonNode.get("data");
         String status = data.get("status").asText();
         String paymentKey = data.get("paymentKey").asText();
         String orderId = data.get("orderId").asText();
@@ -50,9 +53,12 @@ public class WebHookService {
         TempPayment tempPayment = tempPaymentRepository.findByPaymentKeyAndOrderIdAndAmountAndStatus(paymentKey, orderId, amount, PaymentStatus.PENDING)
                 .orElseThrow(() -> new CommonException(Status.NOT_FOUND_TEMP_PAYMENT));
         Member member = tempPayment.getMember();
+        Point point = pointRepository.findByMember(member)
+                .orElseThrow(() -> new CommonException(Status.NOT_FOUND_POINT));
         Optional<Payment> optionalPayment = paymentRepository.findByPaymentKeyAndOrderIdAndAmount(paymentKey, orderId, amount);
         if(optionalPayment.isEmpty()){
             paymentRepository.save(PaymentFactory.from(paymentKey,orderId,amount,member));
+            point.addAmount(amount);
         }
     }
 }
