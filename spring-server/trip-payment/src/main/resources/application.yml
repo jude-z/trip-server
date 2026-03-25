@@ -33,7 +33,7 @@ toss:
   widget:
     secretKey: zzzz
   server:
-    url: http://localhost:8082/v1/payment/confirm
+    url: http://15.164.129.68:8080/v1/payment/confirm
   cancel:
     url: ${TOSS_CANCEL_URL:https://api.tosspayments.com/v1/payments/%s/cancel}
 
@@ -42,5 +42,5 @@ logging:
     org.hibernate.SQL: debug
 payment:
   api:
-    url: aa
+    url: http://15.164.129.68:8080/v1/payment/
     secretKey: aa

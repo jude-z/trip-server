@@ -183,7 +183,6 @@ public class PaymentService {
             idempotencyRedisManager.fail(idempotencyKey);
             throw new CommonException(Status.PAYMENT_SERVER_ERROR);
         }
-        paymentFacade.processConfirm(paymentRequest, id);
         idempotencyRedisManager.complete(idempotencyKey);
         return ApiStatusResponse.of(Status.SUCCESS);
     }

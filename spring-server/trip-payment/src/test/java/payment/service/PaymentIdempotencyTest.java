@@ -9,11 +9,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.*;
+import org.springframework.test.annotation.Commit;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 import payment.infra.jpa.idempotency.IdempotencyRepository;
 import payment.infra.jpa.payment.PaymentRepository;
 import payment.infra.jpa.payment.TempPaymentRepository;
+import payment.infra.jpa.webhook.WebHookHistoryRepository;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -37,6 +41,10 @@ class PaymentIdempotencyTest {
     private IdempotencyRepository idempotencyRepository;
     @Autowired
     private PointRepository pointRepository;
+    @Autowired
+    private WebHookHistoryRepository webHookHistoryRepository;
+    @Autowired
+    RedisTemplate<String,String> redisTemplate;
 
     private volatile String token;
     private Long memberId;
@@ -50,8 +58,7 @@ class PaymentIdempotencyTest {
 
     private long getPoint() {
         return pointRepository.findByMemberId(memberId)
-                .map(Point::getAmount)
-                .orElse(0L);
+                .map(Point::getAmount).get();
     }
 
     private long getMockPaymentCount(String paymentKey) {
@@ -67,8 +74,10 @@ class PaymentIdempotencyTest {
 
     @BeforeEach
     void setUp() throws Exception {
+        redisTemplate.getConnectionFactory().getConnection().serverCommands().flushDb();
         paymentRepository.deleteAll();
         tempPaymentRepository.deleteAll();
+        webHookHistoryRepository.deleteAll();
         idempotencyRepository.deleteAll();
         System.out.println("=== 데이터 정리 완료 ===");
 
@@ -95,13 +104,7 @@ class PaymentIdempotencyTest {
         memberId = sub.get("id").asLong();
 
         // 포인트 0으로 초기화
-        pointRepository.findByMemberId(memberId).ifPresent(point -> {
-            long current = point.getAmount();
-            if (current != 0) {
-                point.addAmount(-current);
-            }
-        });
-        pointRepository.flush();
+        pointRepository.resetPointByMemberId(memberId);
         System.out.println("포인트 초기화: " + getPoint());
 
         // /api/pay로 TempPayment 생성
@@ -115,6 +118,10 @@ class PaymentIdempotencyTest {
         HttpEntity<String> payRequest = new HttpEntity<>(payBody, createHeaders());
         restTemplate.postForEntity(PAYMENT_URL + "/api/pay", payRequest, String.class);
         System.out.println("TempPayment 생성 완료");
+    }
+    @Test
+    void test(){
+        System.out.println(1);
     }
 
     @Test
@@ -394,29 +401,32 @@ class PaymentIdempotencyTest {
         // 2) confirm 직후 DB/포인트 확인
         long paymentCount = paymentRepository.countByPaymentKey("paymentKey1");
         long pointAfterConfirm = getPoint();
-        System.out.println("confirm 후 DB Payment 수: " + paymentCount);
-        System.out.println("confirm 후 포인트: " + pointAfterConfirm);
+        System.out.println("confirm 후 DB Payment 수 (0건 예상): " + paymentCount);
+        System.out.println("confirm 후 포인트 (0 예상): " + pointAfterConfirm);
 
         // 3) 대사(Reconciliation) 스케줄러가 TempPayment를 처리하는 것을 기다림
-        System.out.println(">>> 대사(Reconciliation) 대기 중 (5분)... <<<");
-        int waitMinutes = 5;
+        // 대사는 1분마다 실행, 외부 API 조회 후 Payment 저장 + 포인트 반영
+        System.out.println(">>> 대사(Reconciliation) 대기 중 (15분)... <<<");
+        int waitMinutes = 15;
         for (int i = 1; i <= waitMinutes; i++) {
             Thread.sleep(60000);
             long current = paymentRepository.countByPaymentKey("paymentKey1");
             long currentPoint = getPoint();
             System.out.println("[" + i + "분 경과] DB Payment 수: " + current + ", 포인트: " + currentPoint);
-            if (current > 0 && paymentCount == 0) {
+            if (current > 0) {
                 System.out.println(">>> 대사 처리 확인! <<<");
                 break;
             }
         }
 
+        // 4) 대사 후 DB 결과 확인
         long paymentCountFinal = paymentRepository.countByPaymentKey("paymentKey1");
         long pointFinal = getPoint();
 
         System.out.println("=== V4 테스트 결과 ===");
-        System.out.println("confirm 후 DB: " + paymentCount + "건, 포인트: " + pointAfterConfirm);
-        System.out.println("대사 후 DB: " + paymentCountFinal + "건, 포인트: " + pointFinal);
-        System.out.println("포인트: " + pointFinal + " (10000 = 대사로 정상 복구)");
+        System.out.println("confirm 후 DB 저장: " + paymentCount + "건 (0건 = DB 저장 실패)");
+        System.out.println("confirm 후 포인트: " + pointAfterConfirm + " (0 = 미반영)");
+        System.out.println("대사 후 DB 저장: " + paymentCountFinal + "건 (1건 = 대사 복구)");
+        System.out.println("대사 후 포인트: " + pointFinal + " (10000 = 정상 반영)");
     }
 }

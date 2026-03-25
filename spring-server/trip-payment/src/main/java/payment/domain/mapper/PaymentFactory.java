@@ -39,6 +39,7 @@ public class PaymentFactory {
                 .paymentKey(tempPaymentRequest.getPaymentKey())
                 .status(PaymentStatus.PENDING)
                 .retry(0)
+                .createdTime(LocalDateTime.now())
                 .build();
     }
 }

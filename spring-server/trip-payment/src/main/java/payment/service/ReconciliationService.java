@@ -58,7 +58,9 @@ public class ReconciliationService {
     @Scheduled(scheduler = "reconciliationScheduler",cron = "10 */1 * * * *")
     @Transactional
     public void reconciliation(){
+
         List<TempPayment> tempPayments = queryDslTempPaymentRepository.fetchPendingPayments();
+        if(!tempPayments.isEmpty()) log.info("tempPayment 존재!!");
         List<String> paymentKeys = tempPayments.stream()
                 .map(TempPayment::getPaymentKey)
                 .toList();
@@ -69,12 +71,18 @@ public class ReconciliationService {
                 .map(Payment::getPaymentKey)
                 .collect(Collectors.toSet());
 
+        // 이미 Payment가 존재하는 TempPayment는 삭제 처리
+        List<String> alreadyProcessedKeys = tempPayments.stream()
+                .filter(tp -> existKeys.contains(tp.getPaymentKey()))
+                .map(TempPayment::getPaymentKey)
+                .toList();
+
         List<TempPayment> filteredPaymentKeys = tempPayments.stream()
                 .filter(tp -> !existKeys.contains(tp.getPaymentKey()))
                 .toList();
 
         List<Payment> savePayments = new ArrayList<>();
-        List<String> deletePaymentKeys = new ArrayList<>();
+        List<String> deletePaymentKeys = new ArrayList<>(alreadyProcessedKeys);
         List<String> addRetryPaymentKeys = new ArrayList<>();
         filteredPaymentKeys
                 .forEach(tempPayment -> {
@@ -85,9 +93,10 @@ public class ReconciliationService {
                                 JsonNode.class);
                         if(jsonNodeResponseEntity.getStatusCode() == HttpStatus.OK){
                             JsonNode jsonNode = jsonNodeResponseEntity.getBody();
-                            String paymentKey = jsonNode.get("paymentKey").asText();
-                            String orderId = jsonNode.get("orderId").asText();
-                            long amount = Long.parseLong(jsonNode.get("totalAmount").asText());
+                            JsonNode data = jsonNode.get("data");
+                            String paymentKey = data.get("paymentKey").asText();
+                            String orderId = data.get("orderId").asText();
+                            long amount = Long.parseLong(data.get("totalAmount").asText());
                             Member member = tempPayment.getMember();
                             savePayments.add(PaymentFactory.from(paymentKey,orderId,amount,member));
                             deletePaymentKeys.add(paymentKey);
