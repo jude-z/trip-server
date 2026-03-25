@@ -100,7 +100,7 @@ public class ReconciliationService {
                             Member member = tempPayment.getMember();
                             savePayments.add(PaymentFactory.from(paymentKey,orderId,amount,member));
                             deletePaymentKeys.add(paymentKey);
-                            Point point = pointRepository.findByMember(member)
+                            Point point = pointRepository.findByMemberId(member.getId())
                                     .orElseThrow(() -> new CommonException(Status.NOT_FOUND_POINT));
                             point.addAmount(amount);
                         }else{
