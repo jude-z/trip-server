@@ -25,11 +25,11 @@ public class QueryDslPaymentRepository {
 
         List<PaymentElement> content = queryFactory
                 .select(Projections.constructor(PaymentElement.class,
-                        payment.paymentId,
+                        payment.id,
                         payment.paymentKey,
                         payment.amount,
                         payment.orderId,
-                        payment.cancelled))
+                        payment.status))
                 .from(payment)
                 .leftJoin(payment.member, member)
                 .where(member.id.eq(id))

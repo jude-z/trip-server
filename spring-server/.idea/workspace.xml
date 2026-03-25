@@ -5,15 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="826d744d-a83f-4122-97b3-c028acbe2167" name="Changes" comment="결제 멱등성 구현 및 리팩토리 멀티모듈">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.12.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/idempotency/Idempotency.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/idempotency/Idempotency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/payment/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/payment/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/oauth/handler/OAuth2FailureHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/oauth/handler/OAuth2SuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-core/src/main/java/core/api/security/oauth/userdetail/CustomOAuth2User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-core/src/main/java/core/common/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/java/core/common/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-core/src/main/java/core/service/oauth/OAuth2UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-core/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-core/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/PaymentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/PaymentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/request/TempPaymentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/request/TempPaymentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/oauth/handler/OAuth2FailureHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/oauth/handler/OAuth2SuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/api/security/oauth/userdetail/CustomOAuth2User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/client/PaymentClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/client/PaymentClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/payment/TempPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/domain/pay/payment/TempPayment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/jpa/payment/TempPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/jpa/payment/TempPaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/querydsl/idempotency/QueryDslIdempotencyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/querydsl/idempotency/QueryDslIdempotencyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/projection/payment/PaymentElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/projection/payment/PaymentElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/querydsl/payment/QueryDslPaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/infra/querydsl/payment/QueryDslPaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/scheduler/ReconciliationScheduler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/scheduler/ReconciliationSchedulerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/scheduler/ReconciliationSchedulerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/PaymentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/ReconciliationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/ReconciliationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/WebHookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/java/payment/service/WebHookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/trip-payment/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/test/java/payment/api/controller/PaymentControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/test/java/payment/fixture/PaymentFixture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/test/java/payment/idempotency/IdempotencyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/test/java/payment/service/PaymentFacadeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trip-payment/src/test/java/payment/service/PaymentServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +57,62 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tripplanner-ai" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tripplanner-ai" type="f1a62948:ProjectNode" />
+                <item name="trip-core" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tripplanner-ai" type="f1a62948:ProjectNode" />
+                <item name="trip-core" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tripplanner-ai" type="f1a62948:ProjectNode" />
+                <item name="trip-core" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tripplanner-ai" type="f1a62948:ProjectNode" />
+                <item name="trip-payment" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tripplanner-ai" type="f1a62948:ProjectNode" />
+                <item name="trip-payment" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tripplanner-ai" type="f1a62948:ProjectNode" />
+                <item name="trip-payment" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,22 +149,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/admin/trip-server/spring-server/trip-core/src/main/java/core/infra/jpa&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build spring-server.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.spring-server [:trip-core:build].executor": "Run",
+    "Gradle.spring-server [:trip-core:clean].executor": "Run",
+    "Gradle.spring-server [:trip-payment:build].executor": "Run",
+    "Gradle.spring-server [:trip-payment:clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.CoreApplication.executor": "Run",
+    "Spring Boot.PaymentApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/admin/trip-server/spring-server/trip-core/src/main/java/core/infra/jpa",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/trip-core/src/main/java/core/infra/jpa" />
@@ -90,6 +186,120 @@
       <recent name="com.tripplannerai.infra.querydsl.address" />
       <recent name="com.tripplannerai.infra.jdbc.category" />
     </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CoreApplication">
+    <configuration name="spring-server [:trip-core:build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":trip-core:build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-server [:trip-payment:build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":trip-payment:build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="spring-server [:trip-payment:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":trip-payment:clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="tripplanner-ai.trip-core.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="core.CoreApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="core.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <module name="tripplanner-ai.trip-payment.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="payment.PaymentApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="payment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CoreApplication" />
+        <item itemvalue="Spring Boot.PaymentApplication" />
+        <item itemvalue="Gradle.spring-server [:trip-payment:build]" />
+        <item itemvalue="Gradle.spring-server [:trip-core:build]" />
+        <item itemvalue="Gradle.spring-server [:trip-payment:clean]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

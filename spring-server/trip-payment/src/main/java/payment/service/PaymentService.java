@@ -96,6 +96,81 @@ public class PaymentService {
         return ApiStatusResponse.of(Status.SUCCESS);
     }
 
+    // 시나리오 1: 멱등성 보장 없음 (Redis, DB 체크 없이 바로 결제)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
+    public ApiResponse confirmNoIdempotency(PaymentRequest paymentRequest, Long id){
+        boolean confirm = paymentClient.confirm(paymentRequest);
+        if(confirm){
+            paymentFacade.processConfirm(paymentRequest, id);
+        }
+        return ApiStatusResponse.of(Status.SUCCESS);
+    }
+
+    // 시나리오 2: Redis 사용하지만 Redis 장애 시 멱등성 뚫림 (실제 Redis 내려서 테스트)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
+    public ApiResponse confirmRedisFail(String idempotencyKey, PaymentRequest paymentRequest, Long id){
+        try {
+            Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
+            if(success != null && !success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        } catch (CommonException e) {
+            throw e;
+        } catch (Exception e) {
+            // Redis 장애 시 로그만 남기고 통과 → 멱등성 뚫림
+            log.warn("[V2] Redis 장애 발생 - 멱등성 체크 스킵. key={}", idempotencyKey);
+        }
+
+        boolean confirm = paymentClient.confirm(paymentRequest);
+        if(confirm){
+            paymentFacade.processConfirm(paymentRequest, id);
+        }
+        return ApiStatusResponse.of(Status.SUCCESS);
+    }
+
+    // 시나리오 3: Redis 체크만, DB 저장 안함 (웹훅으로 보완)
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
+    public ApiResponse confirmNoDbSave(String idempotencyKey, PaymentRequest paymentRequest, Long id){
+        Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
+        if(success == null) throw new CommonException(Status.REDIS_SERVER_ERROR);
+        if(!success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+
+        // DB 멱등성 저장 스킵 (DB 장애 시뮬레이션)
+        log.warn("[NO_DB_SAVE] DB 멱등성 저장 스킵 - 웹훅으로 보완 필요. key={}", idempotencyKey);
+
+        boolean confirm = paymentClient.confirm(paymentRequest);
+        if(confirm){
+            paymentFacade.processConfirm(paymentRequest, id);
+        }
+        return ApiStatusResponse.of(Status.SUCCESS);
+    }
+
+    // 시나리오 4: Redis+DB 멱등성 사용, 외부 서버 오류 → 외부 API로 결제 상태 확인
+    @Transactional(propagation = Propagation.NOT_SUPPORTED)
+    public ApiResponse confirmExternalCheck(String idempotencyKey, PaymentRequest paymentRequest, Long id){
+        Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
+        if(success == null) throw new CommonException(Status.REDIS_SERVER_ERROR);
+        if(!success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+
+        Optional<Idempotency> optionalIdempotency = queryDslIdempotencyRepository.findByIdempotencyKey(idempotencyKey);
+        if (optionalIdempotency.isPresent()) {
+            throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        }
+        idempotencyRepository.save(Idempotency.of(idempotencyKey));
+
+        boolean confirm = paymentClient.confirm(paymentRequest);
+        if(!confirm){
+            // 외부 서버 오류 → 결제 상태 직접 조회
+            log.warn("[EXTERNAL_CHECK] 외부 결제 서버 오류 - paymentKey로 결제 상태 직접 조회. key={}", idempotencyKey);
+            boolean paymentCompleted = paymentClient.checkPaymentStatus(paymentRequest.getPaymentKey());
+            if(paymentCompleted){
+                paymentFacade.processConfirm(paymentRequest, id);
+                return ApiStatusResponse.of(Status.SUCCESS);
+            }
+            throw new CommonException(Status.PAYMENT_SERVER_ERROR);
+        }
+        paymentFacade.processConfirm(paymentRequest, id);
+        return ApiStatusResponse.of(Status.SUCCESS);
+    }
+
     public ApiResponse fetchPayments(Long id, Integer pageNum) {
         memberRepository.findById(id)
                 .orElseThrow(() -> new CommonException(Status.NOT_FOUND_MEMBER));

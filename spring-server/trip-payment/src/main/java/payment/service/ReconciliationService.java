@@ -48,7 +48,7 @@ public class ReconciliationService {
         this.apiSecretKey = apiSecretKey;
     }
 
-    @Scheduled(scheduler = "reconciliationScheduler",cron = "10/* * * * *")
+    @Scheduled(scheduler = "reconciliationScheduler",cron = "10 */1 * * * *")
     @Transactional
     public void reconciliation(){
         List<TempPayment> tempPayments = queryDslTempPaymentRepository.fetchPendingPayments();

@@ -14,6 +14,7 @@ public interface TempPaymentRepository extends JpaRepository<TempPayment, Long> 
     Optional<TempPayment> findByPaymentKeyAndOrderIdAndAmountAndStatus(String paymentKey, String orderId, Long amount, PaymentStatus status);
 
     @Modifying
+    @Query("DELETE FROM TempPayment t WHERE t.paymentKey IN :paymentKeys")
     void deleteByPaymentKeyInBatch(List<String> paymentKeys);
     @Modifying
     @Query("update TempPayment set retry = retry + 1 where paymentKey in :addRetryPaymentKeys")

@@ -1,23 +1,20 @@
 package payment.scheduler;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.TaskScheduler;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
-
-import java.util.Objects;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
 @EnableScheduling
+@Configuration
 public class ReconciliationSchedulerConfig {
 
     @Bean
-    ThreadPoolTaskExecutor reconciliationScheduler(){
-        ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
-        taskExecutor.setCorePoolSize(1);
-        taskExecutor.setMaxPoolSize(1);
-        return taskExecutor;
-
+    TaskScheduler reconciliationScheduler(){
+        ThreadPoolTaskScheduler scheduler = new ThreadPoolTaskScheduler();
+        scheduler.setPoolSize(1);
+        return scheduler;
     }
 
 }

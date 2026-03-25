@@ -23,7 +23,7 @@ public class TempPayment {
     private String paymentKey;
     @Column(name = "order_id")
     private String orderId;
-    private Integer amount;
+    private Long amount;
     @ManyToOne
     @JoinColumn(name = "member_id")
     private Member member;

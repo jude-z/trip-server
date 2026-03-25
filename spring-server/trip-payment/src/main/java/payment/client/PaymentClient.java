@@ -52,6 +52,19 @@ public class PaymentClient {
             return false;
         }
     }
+    public boolean checkPaymentStatus(String paymentKey){
+        try {
+            String checkUrl = url.replace("/confirm", "/" + paymentKey);
+            HttpHeaders headers = getHeaders();
+            HttpEntity<Void> requestEntity = new HttpEntity<>(headers);
+            ResponseEntity<String> response = restTemplate.exchange(checkUrl, HttpMethod.GET, requestEntity, String.class);
+            return response.getStatusCode() == HttpStatus.OK;
+        }catch (Exception e){
+            log.error(e.getMessage(),e);
+            return false;
+        }
+    }
+
     private HttpHeaders getHeaders(){
         String auth = widgetSecretKey + ":";
         String encodedAuth = Base64.getEncoder().encodeToString(auth.getBytes(StandardCharsets.UTF_8));

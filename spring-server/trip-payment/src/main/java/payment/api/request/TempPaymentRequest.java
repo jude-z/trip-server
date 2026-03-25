@@ -13,5 +13,5 @@ public class TempPaymentRequest {
 
     private String paymentKey;
     private String orderId;
-    private Integer amount;
+    private Long amount;
 }
