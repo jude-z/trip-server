@@ -51,7 +51,7 @@ public enum Status {
     NULL_PATH("NP", "Path Cannot Be Null", HttpStatus.BAD_REQUEST),
     GET_COURSES_LIKED("SUCCESS", "Liked Courses Retrieved Successfully", HttpStatus.OK),
     GET_DESTINATIONS_BY_CONTENT_ID("SUCCESS", "Destinations Retrieved By Content Id Successfully", HttpStatus.OK),
-    ALREADY_PROCESS_PAYMENT("PP","Already Process Payment",HttpStatus.BAD_REQUEST);
+    ALREADY_EXIST_PAYMENT("PP","Already Process Payment",HttpStatus.BAD_REQUEST);
     private final String code;
     private final String message;
     private final HttpStatus httpStatus;

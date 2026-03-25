@@ -2,7 +2,9 @@ package core.api.response;
 
 import core.common.Status;
 import lombok.Builder;
+import lombok.Getter;
 
+@Getter
 public class ApiDataResponse<T> extends ApiResponse{
     private T data;
     private String code;

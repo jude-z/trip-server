@@ -7,20 +7,17 @@ import core.domain.entity.member.Member;
 import core.domain.entity.point.Point;
 import core.infra.jpa.point.PointRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import payment.domain.mapper.PaymentFactory;
-import payment.domain.pay.idempotency.Idempotency;
 import payment.domain.pay.payment.Payment;
 import payment.domain.pay.payment.TempPayment;
 import payment.domain.pay.status.PaymentStatus;
-import payment.infra.jpa.idempotency.IdempotencyRepository;
+import payment.domain.pay.webhook.WebHookHistory;
 import payment.infra.jpa.payment.PaymentRepository;
 import payment.infra.jpa.payment.TempPaymentRepository;
-import payment.infra.querydsl.idempotency.QueryDslIdempotencyRepository;
+import payment.infra.jpa.webhook.WebHookHistoryRepository;
 
-import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 import java.util.Optional;
 
 @Service
@@ -28,37 +25,41 @@ import java.util.Optional;
 public class WebHookService {
     private final PaymentRepository paymentRepository;
     private final TempPaymentRepository tempPaymentRepository;
-    private final IdempotencyRepository idempotencyRepository;
-    private final RedisTemplate<String,String> redisTemplate;
-    private final QueryDslIdempotencyRepository queryDslIdempotencyRepository;
     private final PointRepository pointRepository;
+    private final WebHookHistoryRepository webHookHistoryRepository;
 
-
-
+    @Transactional
     public void processWebHook(JsonNode jsonNode) {
         JsonNode data = jsonNode.get("data");
         String status = data.get("status").asText();
         String paymentKey = data.get("paymentKey").asText();
         String orderId = data.get("orderId").asText();
         long amount = Long.parseLong(data.get("totalAmount").asText());
-        if(!status.equals("DONE")) return;
-        Boolean success = redisTemplate.opsForValue().setIfAbsent(paymentKey,"true", Duration.of(24L, ChronoUnit.HOURS));
-        if(success == null) throw new CommonException(Status.REDIS_SERVER_ERROR);
-        if(!success) throw new CommonException(Status.ALREADY_CANCEL_REQUEST);
-        Optional<Idempotency> optionalIdempotency = queryDslIdempotencyRepository.findByIdempotencyKey(paymentKey);
-        if (optionalIdempotency.isPresent()) {
-            throw new CommonException(Status.ALREADY_CANCEL_REQUEST);
+
+        if (!status.equals("DONE")) {
+            webHookHistoryRepository.save(WebHookHistory.of(paymentKey, orderId, amount, status, false));
+            return;
         }
-        idempotencyRepository.save(Idempotency.of(paymentKey));
-        TempPayment tempPayment = tempPaymentRepository.findByPaymentKeyAndOrderIdAndAmountAndStatus(paymentKey, orderId, amount, PaymentStatus.PENDING)
+
+        // DB로 멱등성 체크 - 이미 처리된 웹훅이면 무시
+        Optional<WebHookHistory> existing = webHookHistoryRepository.findByPaymentKeyAndProcessedTrue(paymentKey);
+        if (existing.isPresent()) return;
+
+        TempPayment tempPayment = tempPaymentRepository
+                .findByPaymentKeyAndOrderIdAndAmountAndStatus(paymentKey, orderId, amount, PaymentStatus.PENDING)
                 .orElseThrow(() -> new CommonException(Status.NOT_FOUND_TEMP_PAYMENT));
+
         Member member = tempPayment.getMember();
         Point point = pointRepository.findByMember(member)
                 .orElseThrow(() -> new CommonException(Status.NOT_FOUND_POINT));
+
         Optional<Payment> optionalPayment = paymentRepository.findByPaymentKeyAndOrderIdAndAmount(paymentKey, orderId, amount);
-        if(optionalPayment.isEmpty()){
-            paymentRepository.save(PaymentFactory.from(paymentKey,orderId,amount,member));
+        if (optionalPayment.isEmpty()) {
+            paymentRepository.save(PaymentFactory.from(paymentKey, orderId, amount, member));
+            tempPaymentRepository.delete(tempPayment);
             point.addAmount(amount);
         }
+
+        webHookHistoryRepository.save(WebHookHistory.of(paymentKey, orderId, amount, status, true));
     }
 }

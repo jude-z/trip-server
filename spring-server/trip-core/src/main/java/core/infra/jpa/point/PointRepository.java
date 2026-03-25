@@ -12,4 +12,6 @@ public interface PointRepository extends JpaRepository<Point,Long> {
 
     @Lock(LockModeType.PESSIMISTIC_READ)
     Optional<Point> findByMember(Member member);
+
+    Optional<Point> findByMemberId(Long memberId);
 }

@@ -19,6 +19,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import payment.infra.jpa.payment.TempPaymentRepository;
 
+import java.util.Optional;
+
 @Component
 @RequiredArgsConstructor
 @Transactional(propagation = Propagation.REQUIRES_NEW)
@@ -36,9 +38,9 @@ public class PaymentFacade {
                 .orElseThrow(() -> new CommonException(Status.NOT_FOUND_MEMBER));
         TempPayment tempPayment = tempPaymentRepository
                 .findByPaymentKeyAndOrderIdAndAmountAndStatus(paymentKey, orderId, amount,PaymentStatus.PENDING)
-                .orElseThrow(() -> new CommonException(Status.NOT_FOUND_PAYMENT));
-        paymentRepository.findByPaymentKeyAndOrderIdAndAmount(paymentKey, orderId, amount)
-                .orElseThrow(() -> new CommonException(Status.NOT_FOUND_PAYMENT));
+                .orElseThrow(() -> new CommonException(Status.NOT_FOUND_TEMP_PAYMENT));
+        Optional<Payment> findPayment = paymentRepository.findByPaymentKeyAndOrderIdAndAmount(paymentKey, orderId, amount);
+        if(findPayment.isPresent()) throw new CommonException(Status.ALREADY_EXIST_PAYMENT);
         Payment payment = PaymentFactory.from(paymentRequest, member);
         paymentRepository.save(payment);
         Point point = pointRepository.findByMember(member)

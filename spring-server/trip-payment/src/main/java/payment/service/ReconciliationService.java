@@ -9,6 +9,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
+import core.common.Status;
+import core.common.exception.CommonException;
+import core.domain.entity.point.Point;
+import core.infra.jpa.point.PointRepository;
 import payment.domain.mapper.PaymentFactory;
 import payment.domain.pay.payment.Payment;
 import payment.domain.pay.payment.TempPayment;
@@ -30,6 +34,7 @@ public class ReconciliationService {
     private final QueryDslTempPaymentRepository queryDslTempPaymentRepository;
     private final TempPaymentRepository tempPaymentRepository;
     private final PaymentRepository paymentRepository;
+    private final PointRepository pointRepository;
     private final RestTemplate restTemplate;
     private final String url;
     private final String apiSecretKey;
@@ -38,11 +43,13 @@ public class ReconciliationService {
     public ReconciliationService(PaymentRepository paymentRepository,
                                  QueryDslTempPaymentRepository queryDslTempPaymentRepository,
                                  TempPaymentRepository tempPaymentRepository,
+                                 PointRepository pointRepository,
                                  @Value("${payment.api.url}") String url,
                                  @Value("${payment.api.secretKey}") String apiSecretKey) {
         this.paymentRepository = paymentRepository;
         this.queryDslTempPaymentRepository = queryDslTempPaymentRepository;
         this.tempPaymentRepository = tempPaymentRepository;
+        this.pointRepository = pointRepository;
         this.restTemplate = new RestTemplate();
         this.url = url;
         this.apiSecretKey = apiSecretKey;
@@ -84,6 +91,9 @@ public class ReconciliationService {
                             Member member = tempPayment.getMember();
                             savePayments.add(PaymentFactory.from(paymentKey,orderId,amount,member));
                             deletePaymentKeys.add(paymentKey);
+                            Point point = pointRepository.findByMember(member)
+                                    .orElseThrow(() -> new CommonException(Status.NOT_FOUND_POINT));
+                            point.addAmount(amount);
                         }else{
                             String paymentKey = tempPayment.getPaymentKey();
                             addRetryPaymentKeys.add(paymentKey);

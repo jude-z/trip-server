@@ -28,7 +28,7 @@ public class SecurityConfig {
             ,"/email-check","/check-certification","/subscribe/**","close/**","/certification","/image/**","/auth/refresh",
             "/api/festival/favorites-count","/api/category/total","/api/destination/**","/api/course/**",
             "/health",
-            "/kindplace","/api/receiptReview/reviews","/api/receiptReview/reviews/*"
+            "/kindplace","/api/receiptReview/reviews","/api/receiptReview/reviews/*","/payment/webhook/**"
     };
 
     private final JwtAuthFilter jwtAuthFilter;

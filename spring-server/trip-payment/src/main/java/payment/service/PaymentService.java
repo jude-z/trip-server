@@ -17,6 +17,7 @@ import payment.domain.mapper.PaymentFactory;
 import payment.infra.jpa.idempotency.IdempotencyRepository;
 import payment.infra.jpa.payment.TempPaymentRepository;
 import payment.infra.projection.payment.PaymentElement;
+import payment.infra.redis.IdempotencyRedisManager;
 import payment.domain.pay.idempotency.Idempotency;
 import payment.infra.jpa.payment.PaymentRepository;
 import payment.infra.querydsl.idempotency.QueryDslIdempotencyRepository;
@@ -37,7 +38,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
+@Transactional
 @Slf4j
 public class PaymentService {
 
@@ -50,6 +51,7 @@ public class PaymentService {
     private final RedisTemplate<String,String> redisTemplate;
     private final PaymentClient paymentClient;
     private final PaymentFacade paymentFacade;
+    private final IdempotencyRedisManager idempotencyRedisManager;
 
 
     public ApiResponse pay(TempPaymentRequest tempPaymentRequest, Long id) {
@@ -62,9 +64,9 @@ public class PaymentService {
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public ApiResponse confirm(String idempotencyKey, PaymentRequest paymentRequest, Long id){
 
-        Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
-        if(success == null) throw new CommonException(Status.REDIS_SERVER_ERROR);
-        if(!success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        if(!idempotencyRedisManager.tryAcquire(idempotencyKey)) {
+            throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        }
         Optional<Idempotency> optionalIdempotency = queryDslIdempotencyRepository.findByIdempotencyKey(idempotencyKey);
         if (optionalIdempotency.isPresent()) {
             throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
@@ -72,18 +74,20 @@ public class PaymentService {
         idempotencyRepository.save(Idempotency.of(idempotencyKey));
         boolean confirm = paymentClient.confirm(paymentRequest);
 
-
         if(confirm){
             paymentFacade.processConfirm(paymentRequest, id);
+            idempotencyRedisManager.complete(idempotencyKey);
+        } else {
+            idempotencyRedisManager.fail(idempotencyKey);
         }
         return ApiStatusResponse.of(Status.SUCCESS);
     }
 
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public ApiResponse cancel(String idempotencyKey,CancelPaymentRequest cancelPaymentRequest, Long id) {
-        Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
-        if(success == null) throw new CommonException(Status.REDIS_SERVER_ERROR);
-        if(!success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        if(!idempotencyRedisManager.tryAcquire(idempotencyKey)) {
+            throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        }
         Optional<Idempotency> optionalIdempotency = queryDslIdempotencyRepository.findByIdempotencyKey(idempotencyKey);
         if (optionalIdempotency.isPresent()) {
             throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
@@ -92,6 +96,9 @@ public class PaymentService {
         boolean cancel = paymentClient.cancel(cancelPaymentRequest);
         if(cancel){
             paymentFacade.processCancel(cancelPaymentRequest, id);
+            idempotencyRedisManager.complete(idempotencyKey);
+        } else {
+            idempotencyRedisManager.fail(idempotencyKey);
         }
         return ApiStatusResponse.of(Status.SUCCESS);
     }
@@ -110,8 +117,9 @@ public class PaymentService {
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public ApiResponse confirmRedisFail(String idempotencyKey, PaymentRequest paymentRequest, Long id){
         try {
-            Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
-            if(success != null && !success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+            if(!idempotencyRedisManager.tryAcquire(idempotencyKey)) {
+                throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+            }
         } catch (CommonException e) {
             throw e;
         } catch (Exception e) {
@@ -122,33 +130,39 @@ public class PaymentService {
         boolean confirm = paymentClient.confirm(paymentRequest);
         if(confirm){
             paymentFacade.processConfirm(paymentRequest, id);
+            try { idempotencyRedisManager.complete(idempotencyKey); } catch (Exception ignored) {}
+        } else {
+            try { idempotencyRedisManager.fail(idempotencyKey); } catch (Exception ignored) {}
         }
         return ApiStatusResponse.of(Status.SUCCESS);
     }
 
-    // 시나리오 3: Redis 체크만, DB 저장 안함 (웹훅으로 보완)
+    // 시나리오 3: DB에 결제 정보 저장했을 내려가는 시나리오
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public ApiResponse confirmNoDbSave(String idempotencyKey, PaymentRequest paymentRequest, Long id){
-        Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
-        if(success == null) throw new CommonException(Status.REDIS_SERVER_ERROR);
-        if(!success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        if(!idempotencyRedisManager.tryAcquire(idempotencyKey)) {
+            throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        }
 
         // DB 멱등성 저장 스킵 (DB 장애 시뮬레이션)
         log.warn("[NO_DB_SAVE] DB 멱등성 저장 스킵 - 웹훅으로 보완 필요. key={}", idempotencyKey);
 
         boolean confirm = paymentClient.confirm(paymentRequest);
         if(confirm){
-            paymentFacade.processConfirm(paymentRequest, id);
+//            paymentFacade.processConfirm(paymentRequest, id);
+            idempotencyRedisManager.complete(idempotencyKey);
+        } else {
+            idempotencyRedisManager.fail(idempotencyKey);
         }
         return ApiStatusResponse.of(Status.SUCCESS);
     }
 
-    // 시나리오 4: Redis+DB 멱등성 사용, 외부 서버 오류 → 외부 API로 결제 상태 확인
+    // 시나리오 4: Redis+DB 멱등성 사용, DB 저장 실패 , 웹훅 실패  → 외부 API로 결제 상태 확인
     @Transactional(propagation = Propagation.NOT_SUPPORTED)
     public ApiResponse confirmExternalCheck(String idempotencyKey, PaymentRequest paymentRequest, Long id){
-        Boolean success = redisTemplate.opsForValue().setIfAbsent(idempotencyKey,"true", Duration.of(24L, ChronoUnit.HOURS));
-        if(success == null) throw new CommonException(Status.REDIS_SERVER_ERROR);
-        if(!success) throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        if(!idempotencyRedisManager.tryAcquire(idempotencyKey)) {
+            throw new CommonException(Status.ALREADY_PAYMENT_REQUEST);
+        }
 
         Optional<Idempotency> optionalIdempotency = queryDslIdempotencyRepository.findByIdempotencyKey(idempotencyKey);
         if (optionalIdempotency.isPresent()) {
@@ -162,12 +176,15 @@ public class PaymentService {
             log.warn("[EXTERNAL_CHECK] 외부 결제 서버 오류 - paymentKey로 결제 상태 직접 조회. key={}", idempotencyKey);
             boolean paymentCompleted = paymentClient.checkPaymentStatus(paymentRequest.getPaymentKey());
             if(paymentCompleted){
-                paymentFacade.processConfirm(paymentRequest, id);
+//                paymentFacade.processConfirm(paymentRequest, id);
+                idempotencyRedisManager.complete(idempotencyKey);
                 return ApiStatusResponse.of(Status.SUCCESS);
             }
+            idempotencyRedisManager.fail(idempotencyKey);
             throw new CommonException(Status.PAYMENT_SERVER_ERROR);
         }
         paymentFacade.processConfirm(paymentRequest, id);
+        idempotencyRedisManager.complete(idempotencyKey);
         return ApiStatusResponse.of(Status.SUCCESS);
     }
 

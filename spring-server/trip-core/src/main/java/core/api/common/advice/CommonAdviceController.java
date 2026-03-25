@@ -19,4 +19,10 @@ public class CommonAdviceController {
         return new ResponseEntity<>(errorResponse,exception.getStatus().getHttpStatus());
     }
 
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleException(Exception exception) {
+        log.error("exception!! ",exception);
+        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+    }
+
 }
