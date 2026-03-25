@@ -3,3 +3,5 @@ spring-server/trip-payment/build
 .idea
 spring-server/build
 mock-server/build
+.mcp.json
+.DS_Store
