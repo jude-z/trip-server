@@ -32,7 +32,7 @@ class PaymentControllerTest {
         PaymentData paymentData = PaymentData.builder()
                 .paymentKey("pk_123")
                 .orderId("order_1")
-                .totalAmount("10000")
+                .totalAmount(10000L)
                 .build();
         ApiResponse<PaymentData> apiResponse = ApiResponse.<PaymentData>builder()
                 .data(paymentData)
