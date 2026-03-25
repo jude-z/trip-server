@@ -157,10 +157,13 @@ class PaymentIdempotencyTest {
         latch.await();
         executorService.shutdown();
 
+        long mockCount = getMockPaymentCount("paymentKey1");
+
         System.out.println("=== V1 멱등성 없음 테스트 결과 ===");
         System.out.println("성공: " + successCount.get());
         System.out.println("실패: " + failCount.get());
         System.out.println("총 요청: " + threadCount);
+        System.out.println("외부 PG 결제 요청 횟수: " + mockCount + " (1건 초과 시 중복 결제)");
     }
 
     @Test
@@ -206,10 +209,13 @@ class PaymentIdempotencyTest {
         latch.await();
         executorService.shutdown();
 
+        long mockCount = getMockPaymentCount("paymentKey1");
+
         System.out.println("=== V2 Redis 정상 테스트 결과 ===");
         System.out.println("성공: " + successCount.get());
         System.out.println("실패: " + failCount.get());
         System.out.println("총 요청: " + threadCount);
+        System.out.println("외부 PG 결제 요청 횟수: " + mockCount + " (1건 = 멱등성 보장)");
     }
 
     @Test
@@ -296,9 +302,12 @@ class PaymentIdempotencyTest {
         latch2.await();
         executor2.shutdown();
 
+        long mockCount = getMockPaymentCount("paymentKey1");
+
         System.out.println("=== V2 최종 결과 ===");
         System.out.println("1차(Redis 정상) 성공: " + successCount.get() + ", 실패: " + failCount.get());
         System.out.println("2차(Redis 장애) 성공: " + successCount2.get() + ", 실패: " + failCount2.get());
+        System.out.println("외부 PG 결제 요청 횟수: " + mockCount + " (1건 초과 시 멱등성 뚫림)");
     }
 
     @Test
